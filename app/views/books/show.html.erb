@@ -1,0 +1,56 @@
+  <!-- main -->
+  <div class="contents">
+    <!-- user info -->
+    <div class="user">
+      <div class="user-headline">
+        <h2>User info</h2>
+        <!-- user-image -->
+        <!-- user-name introduction -->
+        <div class="user-image"></div>
+        <!-- user-id　挿入　-->
+        <div></div>
+        <div></div>
+        <a href="#">profile編集</a>
+      </div>
+    </div>
+<!-- books -->
+<div class="book">
+  <h2>Book detail</h2>
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th>o</th>
+  </tr>
+ <tr>
+   <% @books.each do |book| %>
+   <td><%= book.title %></td>
+  <td><%= book.body %></td>
+  <td>
+  <a class="books-icon" href="#">Edit</a>
+  <a class="books-icon" href="#">Desreoy</a>
+  </td>
+  <% end %>
+ </tr>
+</table>
+</div>
+</div>
+
+<!-- new books -->
+<div class="new-book">
+<h2>New book</h2>
+<!-- form_with -->
+<%= form_with model:@book, local:true do|f| %>
+
+<h4>Title</h4>
+<%= f.text_field :title %>
+
+<h4>Opinion</h4>
+<%= f.text_area :body %>
+
+<%= f.submit 'Create Book' %>
+
+<% end %>
+
+</div>
+</div>
