@@ -1,5 +1,5 @@
- <%= link_to "logout", destroy_user_session_path, method: :delete %>
 <body>
+  
     <header>
       <div class="headline">
         <h1>Bookers</h1>
@@ -15,6 +15,7 @@
     </header>
     <!-- main -->
 <main >
+   <%= link_to "logout", destroy_user_session_path, method: :delete %>
   <div class="contents">
     <!-- user info -->
     <div class="user">
@@ -34,14 +35,14 @@
   <h2>Books</h2>
 <table>
   <tr>
-    <th width>image</th>
-    <th>Title</th>
-    <th>opinion</th>
+    <th>image</th>
+    <th>name</th>
+    <th></th>
   </tr>
  <tr>
   <td>1</td>
   <td>1</td>
-  <td>1</td>
+  <td>Show</td>
  </tr>
 </table>
 </div>
