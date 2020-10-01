@@ -1,2 +1,24 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<h2>User info</h2>
+
+<!-- form_with -->
+<%= form_with model:@post_image, local:true do |f| %>
+
+  <div class="row">
+    <div class="col-sm-12">
+
+    </div>
+  </div>
+  <br>
+  <label class="user-info-name">Name</label>
+        <p><%= f.text_field :user_name, class:"form-control" %>
+        <span class="fa fa-building form-control-icon" aria-hidden="true"></span>
+        </p>
+  <div class="row">
+  <label class="user-info-introduction">Introduction</label>
+     <p> <%= f.text_area :introduction, class:"form-control" %>
+     <span class="fa fa-building form-control-icon" aria-hidden="true"></span>
+     </p>
+ </div>
+  <hr>
+  <%= f.submit "UpdateUser", class:"btn btn-lg btn-block btn-base-1 mt-20" %>
+<% end %>

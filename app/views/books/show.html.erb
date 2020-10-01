@@ -1,36 +1,31 @@
-  <!-- main -->
+   <!-- main -->
   <div class="contents">
     <!-- user info -->
     <div class="user">
       <div class="user-headline">
         <h2>User info</h2>
-        <!-- user-image -->
-        <!-- user-name introduction -->
-        <div class="user-image"></div>
-        <!-- user-id　挿入　-->
-        <div></div>
-        <div></div>
-        <a href="#">profile編集</a>
+     <!-- users.info -->
+
+
       </div>
     </div>
 <!-- books -->
 <div class="book">
   <h2>Book detail</h2>
-<table>
+<table width: "100%" >
   <tr>
-    <th></th>
-    <th></th>
-    <th>o</th>
+    <th　width: "40px"></th>
+    <th width: "40px">Title</th>
+    <th width: "50px">opinion</th>
   </tr>
  <tr>
-   <% @books.each do |book| %>
-   <td><%= book.title %></td>
-  <td><%= book.body %></td>
+  <td>image</td>
+  <td><%= @book.title %></td>
+  <td><%= @book.body %></td>
   <td>
-  <a class="books-icon" href="#">Edit</a>
-  <a class="books-icon" href="#">Desreoy</a>
-  </td>
-  <% end %>
+    <%= link_to'Edit', edit_book_path(@book) %>
+    <%= link_to 'Destroy', books_path(@book.id), method: :delete %>
+    </td>
  </tr>
 </table>
 </div>
