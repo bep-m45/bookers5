@@ -24,40 +24,37 @@
 
 header {
   width: 100%;
-  height: 55px;
-  padding: 5px;
+  padding: 20px;
   margin: 0 auto;
-
 }
 
-.headline {
-  width: 100%;
-  height: 25px;
-  margin-bottom: 3px;
 
 }
 h1 {
 font-size: 20px;
 }
+heaer-line{
+  margin: 5px;
+}
 
 .nav-list {
   width: 100%;
   height: 18px;
-
-
+   display: flex;
+  justify-content: flex-end;
 }
 
 .nav-list-item {
   font-size: 15px;
-  display: inline-block;
-  text-align: left;
-  padding: 5
+  list-style: none;
+  padding: 3px;
+  text-align: center;
 }
 
 .main {
-  height: 700px;
+  width: 100%;
   margin: 0 auto;
-  padding: 5px;
+  padding: 20px;
 }
 
 .contents {
@@ -67,18 +64,15 @@ font-size: 20px;
 
 .user {
   width:30%;
-  height: 400px;
   margin-right: 10px;
 }
 
 .book {
  width: 70%;
- height: 400px;
 }
 
 .new-book {
   width: 30%;
-  height: 400px;
   margin-right: 10px;
 }
 
@@ -89,4 +83,16 @@ footer {
 .footer-text {
   width: 100;
   text-align: left;
+}
+
+h3 {
+  font-size: 13px;
+}
+
+.user {
+  margin-bottom: 20px;
+}
+
+.new-book {
+  margin-top: 20px;
 }

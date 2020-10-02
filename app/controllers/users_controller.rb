@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   def show
   @user = User.find(params[:id])
   @book = Book.new
-
+  @books = @user.books
   end
 
   def edit
@@ -13,13 +13,19 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user_image = UserImage.new(post_image_params)
+    @user_image = UserImage.new(user_image_params)
     @user_image.user.id = current_user.id
-    @user_image.save
     redirect_to @book
   end
 
   def update
+    @user = User.find(params[:id])
+    if @user.save
+       flash[:noatice] = 'You have updated user successfully.'
+       redirect_to user_path(@user.id)
+    else
+       redirect_to 'edit'
+    end
   end
 
   private

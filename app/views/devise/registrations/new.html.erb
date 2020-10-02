@@ -1,4 +1,18 @@
 <h2>Sign up</h2>
+<!-- validates -->
+
+<% if @user.errors.any? %>
+<h5><%= pluralize(@user.errors.count, "error") %> prohibited this product from being saved:</h5>
+  <div class="alert alert-warning">
+    <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+<!-- form_for -->
+
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
   <div class="field">

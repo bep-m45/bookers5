@@ -8,11 +8,24 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <li class="">
 
-  </li>
+    <header>
+      <div class="headline">
+        <h1>Bookers</h1>
+      </div>
+      <nav>
+        <ul class="nav-list">
+          <%#= link_to'Home', user_path(@user.id) %>
+          <p></p><li class="nav-list-item">Users</li>
+          <li class="nav-list-item">Books</li>
+          <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+        </ul>
+      </nav>
+    </header>
+
+  <!-- main -->
+
 
    <%= yield %>
   </body>

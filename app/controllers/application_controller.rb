@@ -9,6 +9,17 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resource)
     user_path(resource)
   end
+  
+  def create
+   if @user.save
+     redirect_to user_path(@user.id)
+   else
+    redirect_to 'new'
+   end
+ end
+     
+
+
 
   protected
 
