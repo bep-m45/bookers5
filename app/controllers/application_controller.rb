@@ -10,13 +10,7 @@ class ApplicationController < ActionController::Base
     user_path(resource)
   end
   
-  def create
-   if @user.save
-     redirect_to user_path(@user.id)
-   else
-    redirect_to 'new'
-   end
-  end
+
 
   protected
 

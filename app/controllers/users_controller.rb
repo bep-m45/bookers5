@@ -16,6 +16,12 @@ class UsersController < ApplicationController
     @user_image = UserImage.new(user_image_params)
     @user_image.user.id = current_user.id
     redirect_to @book
+
+     if @user.save
+     redirect_to user_path(@user.id)
+     else
+      redirect_to 'new'
+     end
   end
 
   def update

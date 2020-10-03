@@ -16,9 +16,9 @@
       </div>
       <nav>
         <ul class="nav-list">
-          <%#= link_to'Home', user_path(@user.id) %>
-          <p></p><li class="nav-list-item">Users</li>
-          <li class="nav-list-item">Books</li>
+          <%#= link_to 'Home', user_path(@user.id) %>
+          <li class="nav-list-item">Users</li>
+          <%= link_to 'Books', books_path %>
           <%= link_to "Logout", destroy_user_session_path, method: :delete %>
         </ul>
       </nav>
