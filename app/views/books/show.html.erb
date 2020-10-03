@@ -1,19 +1,16 @@
    <!-- main -->
-   
+
     <% flash.each do |message_type, message| %>
       <%= message %>
     <% end %>
    <div class="contents">
-     
+
     <!-- user info -->
-    
+
     <div class="user">
       <div class="user-headline">
         <h2>User info</h2>
-        
-     <!-- users.info -->
-     
-       <%= attachment_image_tag @user, :image, :fill, 50, 50, format: 'jpeg', class: "img-circle pull-left profile-img", fallback: "no_image.jpg" %> 
+       <%= attachment_image_tag @user, :profile_image, :fill, 50, 50, format: 'jpeg', class: "img-circle pull-left profile-img", fallback: "no_image.jpg" %>
        <h3 class="profile-name"><%= @user.name %></h3>
        <h3 class="profile-introduction"><%= @user.introduction %></h3>
        <% if @user.id == current_user.id %>
@@ -21,7 +18,7 @@
        <% end %>
       </div>
     </div>
-    
+
 <!-- books -->
 
 <div class="book">
@@ -33,7 +30,7 @@
     <th width: "50px">opinion</th>
   </tr>
  <tr>
-  <td>image</td>
+  <td><%= attachment_image_tag @user, :profile_image, :fill, 20, 20, format: 'jpeg', class: "img-circle pull-left profile-img", fallback: "no_image.jpg" %></td>
   <td><%= @book.title %></td>
   <td><%= @book.body %></td>
   <td>
@@ -51,16 +48,13 @@
 <h2>New book</h2>
 
 <!-- form_with -->
-<%= form_with model:@book, local:true do|f| %>
 
-<h4>Title</h4>
-<%= f.text_field :title %>
-
-<h4>Opinion</h4>
-<%= f.text_area :body %>
-
-<%= f.submit 'Create Book' %>
-
+  <%= form_for(@book) do |f| %>
+  <p>Title</p>
+  <%= f.text_field :title %>
+  <p>Body</p>
+  <%= f.text_area :body %><br>
+  <%= f.submit 'Create Book' %>
 <% end %>
 
 </div>

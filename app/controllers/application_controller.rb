@@ -16,10 +16,7 @@ class ApplicationController < ActionController::Base
    else
     redirect_to 'new'
    end
- end
-     
-
-
+  end
 
   protected
 

@@ -85,6 +85,15 @@ footer {
   text-align: left;
 }
 
+/* top */
+
+.top-main {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+
+
 h3 {
   font-size: 13px;
 }
@@ -96,3 +105,4 @@ h3 {
 .new-book {
   margin-top: 20px;
 }
+

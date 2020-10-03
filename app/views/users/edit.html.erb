@@ -9,17 +9,17 @@
     </div>
   </div>
   <br>
-  <%= form_with model:@user, local:true do |f| %>
+  <%= form_with model: @user, local: true do |f| %>
     <div class="form-group has-icon">
     <div class="user-edit-image">
-      <%= attachment_image_tag @user, :image, :fill, 60, 60, class: "img-circle pull-left profile-thumb", fallback: "no_image.jpg"%>
+      <%= attachment_image_tag @user, :profile_image, :fill, 60, 60, class: "img-circle pull-left profile-thumb", fallback: "no_image.jpg"%>
     </div>
     <label class="control-label sr-only" for="inputEmail">Image</label>
-    <p><%= f.attachment_field :image, class: "user-edit-form" %></p>
+    <p><%= f.attachment_field :profile_image, class: "user-edit-form" %></p>
   </div>
 
   <label class="user-info-name">Name</label>
-        <p><%= f.text_field :user_name, class:"form-control" %>
+        <p><%= f.text_field :name, class:"form-control" %>
         <span class="fa fa-building form-control-icon" aria-hidden="true"></span>
         </p>
   <div class="row">
