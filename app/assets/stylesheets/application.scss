@@ -22,15 +22,17 @@
   box-sizing: border-box;
 }
 
+
 header {
   width: 100%;
   hight: 150px;
   margin: 0 auto;
+  padding: 3px 20px;
 }
 
 
-.bookers {
-font-size: 20px;
+.h1 {
+font-size:15px;
 }
 
 
@@ -46,11 +48,14 @@ font-size: 20px;
   list-style: none;
   padding: 3px;
   text-align: center;
+  font-color: #dddddd;
 }
 
 main {
-  padding-top: 300px;
+  margin-top: 100px;
+  padding: 20px;
 }
+
 /* footer */
 
 footer {

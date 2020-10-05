@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 
-
   <head>
     <title>Bookers2</title>
     <%= csrf_meta_tags %>
@@ -15,9 +14,9 @@
   <div class="row">
     <div class="col-md-12">
       <header class="navbar navbar-fixed-top navbar-inverse">
-          <div class="headline">
-            <span class="bookers">Bookers</span>
-          </div>
+        <div class="headline">
+          <span class="text-muted"><h1>Bookers</h1></span>
+        </div>
              <nav>
                 <ul class="nav-list">
                  <% if user_signed_in? %>
@@ -49,7 +48,8 @@
                </li>
 
                 <li class="nav-list-item">
-                     <span class="glyphicon glyphicon-home" aria-hidden="true">
+                     	
+                     <span class="glyphicon glyphicon-link" aria-hidden="true">
                       <%= link_to 'About', home_about_path %>
                      </span>
                   </li>
