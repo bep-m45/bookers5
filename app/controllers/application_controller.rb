@@ -21,11 +21,7 @@ class ApplicationController < ActionController::Base
     redairect_to root_path
   end
 
-  def authenticate_user
-    if @current_user == nil
-     redirect_to("/users/sign_in")
-    end
-  end
+
 
   protected
 

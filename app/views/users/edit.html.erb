@@ -5,7 +5,7 @@
   <!-- user-image -->
 
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-xs-6">
       <div class="user-edit-image">
       <%= attachment_image_tag @user, :profile_image, :fill, 60, 60, class: "img-circle pull-left profile-thumb", fallback: "no_image.jpg"%>
       </div>
@@ -25,7 +25,7 @@
   <% end %>
 
   <div class="row">
-    <div class="col-md-3">
+    <div class="col-xs-3">
     <%= form_with model: @user, local: true do |f| %>
         <label class="control-label sr-only" for="inputEmail">Image</label>
           <p><%= f.attachment_field :profile_image, class: "user-edit-form" %></p>
@@ -33,7 +33,7 @@
           <p><%= f.text_field :name, class:"form-control" %></p>
         <div class="user-info-introduction">Introduction</div>
           <p> <%= f.text_area :introduction, class:"form-control" %> </p>
-       <%= f.submit "UpdateUser", class:"btn btn-lg  btn-base-1 mt-20" %>
+       <%= f.submit "Update User", class:"btn btn-lg  btn-base-1 mt-20" %>
     <% end %>
     </div>
  </div>
