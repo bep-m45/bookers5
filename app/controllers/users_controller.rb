@@ -1,5 +1,10 @@
 class UsersController < ApplicationController
+
+
   def index
+      @user = current_user
+      @users = User.all
+      @book = Book.new
   end
 
   def show
@@ -15,7 +20,8 @@ class UsersController < ApplicationController
   def create
     @user_image = UserImage.new(user_image_params)
     @user_image.user.id = current_user.id
-    redirect_to @book
+    @user = User(current_user.id)
+    redirect_to @user
 
      if @user.save
      redirect_to user_path(@user.id)

@@ -24,18 +24,15 @@
 
 header {
   width: 100%;
-  padding: 20px;
+  hight: 150px;
   margin: 0 auto;
 }
 
 
-}
-h1 {
+.bookers {
 font-size: 20px;
 }
-heaer-line{
-  margin: 5px;
-}
+
 
 .nav-list {
   width: 100%;
@@ -51,58 +48,24 @@ heaer-line{
   text-align: center;
 }
 
-.main {
-  width: 100%;
-  margin: 0 auto;
-  padding: 20px;
+main {
+  padding-top: 300px;
 }
-
-.contents {
-  display: flex;
-  justify-content: center;
-}
-
-.user {
-  width:30%;
-  margin-right: 10px;
-}
-
-.book {
- width: 70%;
-}
-
-.new-book {
-  width: 30%;
-  margin-right: 10px;
-}
+/* footer */
 
 footer {
-  height: 55px;
+  width: 100%;
+  padding: 20px;
+  margin: 0 auto;
 }
 
 .footer-text {
-  width: 100;
-  text-align: left;
+   font-size: 15px;
+  list-style: none;
+  padding: 3px;
+  text-align: right
 }
 
-/* top */
-
-.top-main {
-  width: 100%;
-  display: inline-block;
-  text-align: center;
+main {
+  padding: 20px;
 }
-
-
-h3 {
-  font-size: 13px;
-}
-
-.user {
-  margin-bottom: 20px;
-}
-
-.new-book {
-  margin-top: 20px;
-}
-
