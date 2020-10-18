@@ -1,3 +1,4 @@
+
  <main>
   <% flash.each do |message_type, message| %>
   <%= message %>
@@ -8,6 +9,9 @@
 
  <div class = "row">
      <div class="col-xs-3">
+     <% if user_signed_in? %>
+      <%= render 'follow_form', user: @user %>
+      <% end %>
      <%= render 'users/list', user: @user, book: @book %>
      </div>
   <div class="col-xs-9">
@@ -32,8 +36,8 @@
     </tbody>
      </table>
      <ol>
-      
-      
+
+
       <li>
        <i class="fa fa-comment"></i>
        <a href="#comments"><%= @book.book_comments.count %></a>
@@ -44,5 +48,7 @@
   </div>
  </div>
  </div>
+
+
 
 </main>

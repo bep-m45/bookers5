@@ -20,9 +20,33 @@
                <th>introduction</th>
               <td><%= user.introduction %></td>
               </tr>
+              <tr>
+                <% user ||= current_user %>
+                <td>
+                   <div class="stats">
+                    <%=link_to user.following.count, following_user_path(user) %>
+                      <strong id="following" class="stat">
+                        followed
+                      </strong>
+                    </td>
+                  
+                    <td>
+                   <%=link_to @user.followers.count, followers_user_path(user) %>
+                    <strong id="followers" class="stat">
+                    followers
+                    </strong>
+                    </td>   
+                   
+                  </div>
+              
+              </tr>
              </tbody>
           </table>
+          
         <div>
+          
+
+          
           <% if user.id == current_user.id %>
           <button type="button" class="text-center btn-light btn-lg btn-block" >
           <%= link_to "", edit_user_path(user.id), class:  "glyphicon glyphicon-wrench"%>
@@ -33,6 +57,7 @@
           </button>
           <% end %>
         </div>
+        
     </div>
 </div>
 
