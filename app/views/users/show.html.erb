@@ -30,17 +30,20 @@
         <td><%= link_to attachment_image_tag(@user, :profile_image, :fill, 20, 20, format: 'jpeg', class: "img-circle pull-left profile-img", fallback: "no_image.jpg"), user_path(@user.id) %> </td>
         <td><%= link_to book.title, book_path(book) %></td>
         <td><%= book.body %></td>
-        
       </tr>
-    </tbody>
-     </table>
-     <ol>
-      <li>
-       <i class="fa fa-comment"></i>
-       <a href="#comments"><%= @book.book_comments.count %></a>
-      </li>
-     </ol>
-     <% end %>
+     <tr>
+      <td>
+       <ul>
+        <li>
+         <i class="fa fa-comment"></i>
+           <%= link_to "#{book.book_comments.count} コメント", book_path(book.id) %>
+         </li>
+       </ul>
+       <% end %>
+      </td>
+     </tr>
+     </tbody>
+    </table>
    </div>
    </div>
   </div>
